@@ -1,5 +1,39 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background: rgba(0,0,0,.05);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.box {
+  width: 280px;
+  height: 226px;
+}
+
+.box-marker {
+  position: relative;
+  left: 225px;
+  bottom: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.vocab {
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+.vocab .description {
+  flex: 1;
+  padding-left: 25px;
+  font-size: 32px;
 }
