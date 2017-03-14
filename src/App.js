@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Pager from './components/Pager'
 import Vocabs from './components/Vocabs'
 import Legend from './components/Legend'
 
@@ -11,7 +12,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Vocabs />
+        <Pager>
+          <Vocabs />
+        </Pager>
         <Legend />
       </div>
     )

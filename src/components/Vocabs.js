@@ -4,12 +4,33 @@ import gql from 'graphql-tag'
 import Loading from 'react-loading-animation'
 
 import VocabCard from './VocabCard'
-import Legend from './Legend'
 
 class Vocabs extends React.Component {
 
   static propTypes = {
     data: React.PropTypes.object.isRequired,
+  }
+
+  _renderPrev = () => {
+    return (
+      <a
+        className='link dim silver tc v-mid fw4 f1'
+        onClick={this.props.previous}
+      >
+        {'<'}
+      </a>
+    )
+  }
+
+  _renderNext = () => {
+    return (
+      <a
+        className='link dim silver tc v-mid fw4 f1'
+        onClick={this.props.next}
+      >
+        {'>'}
+      </a>
+    )
   }
 
   render () {
@@ -20,8 +41,9 @@ class Vocabs extends React.Component {
     }
 
     return (
-      <div className={'w-100 flex justify-center pa6'}>
-        <div className='w-100 flex flex-wrap' style={{maxWidth: 1150}}>
+      <div className={'flex pa6 justify-center items-center w-100'}>
+        {this._renderPrev()}
+        <div className='' style={{maxWidth: 1150}}>
           {this.props.data.allVocabs.map((vocab) => (
             <VocabCard
               key={vocab.id}
@@ -29,15 +51,18 @@ class Vocabs extends React.Component {
             />
           ))}
         </div>
+        {this._renderNext()}
       </div>
     )
   }
 }
 
-
 const allVocabsQuery = gql`
-query {
-  allVocabs {
+query VocabPage($skip: Int!) {
+  allVocabs(
+    first: 1
+    skip: $skip
+  ) {
     id
     farsi
     german
@@ -46,5 +71,12 @@ query {
   }
 }`
 
-
-export default graphql(allVocabsQuery)(Vocabs)
+export default graphql(allVocabsQuery, {
+  options: (ownProps) => {
+    return {
+      variables: {
+        skip: ownProps.page
+      }
+    }
+  }
+})(Vocabs)

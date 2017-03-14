@@ -10,24 +10,24 @@ export default class VocabItem extends React.Component {
   }
 
   render () {
-    console.log(this.props.vocab.type, backgroundForType(this.props.vocab.type))
 
     return (
       <div
-        className={'bg-white ma3 grow box vocab flex flex-column no-underline br2'}
+        className={'bg-white ma3 box vocab flex flex-column no-underline br2'}
       >
-        <div className='flex items-center black-80 fw3 description'>
-          {this.props.vocab.farsi}
-        </div>
-        <div className='flex items-center black-80 fw3 description'>
-          {this.props.vocab.phonetics}
-        </div>
-        <div className='flex items-center black-80 fw3 description'>
-          {this.props.vocab.german}
-        </div>
         <Marker
           color={backgroundForType(this.props.vocab.type)}
+          label={this.props.vocab.type}
         />
+        <div className='rtl flex items-center black-80 fw3 description pa3'>
+          {this.props.vocab.farsi}
+        </div>
+        <div className='flex items-center black-80 fw3 description pa3'>
+          {this.props.vocab.phonetics}
+        </div>
+        <div className='flex items-center black-80 fw3 description pa3'>
+          {this.props.vocab.german}
+        </div>
       </div>
     )
   }

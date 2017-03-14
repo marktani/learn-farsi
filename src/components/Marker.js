@@ -12,9 +12,11 @@ export default class Marker extends React.Component {
 
     return (
       <div
-        className='box-marker'
+        className='white tc'
         style={{
           backgroundColor: `${this.props.color}`,
+          width: '125px',
+          height: '25px',
         }}
       >
         {this.props.label}

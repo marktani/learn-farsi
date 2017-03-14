@@ -13,13 +13,19 @@ class Legend extends React.Component {
     }
 
     return (
-    <ul class='list pl0 ml0 center mw5 ba b--light-silver br3'>
+    <ul className='list pl0 ml0 center mw4'>
         {this.props.data.type.enumValues.map((type) => (
-          <li class='ph3 pv2'>
-            <div>{type.name}</div>
-            <Marker
-              color={backgroundForType(type.name)}
-            />
+          <li
+            className='flex items-center lh-copy ph0-l'
+          >
+            <div
+              className='w2 h2'
+            >
+              <Marker
+                color={backgroundForType(type.name)}
+                label={type.name}
+              />
+            </div>
           </li>
         ))}
     </ul>
