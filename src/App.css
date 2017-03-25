@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -16,6 +16,19 @@
 
 .App-intro {
   font-size: large;
+}
+
+.Footer {
+  color: #7F7F7F;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

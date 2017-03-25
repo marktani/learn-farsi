@@ -2,17 +2,27 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding-bottom: 6rem;
   font-family: 'Open Sans', sans-serif;
-  background: rgba(0,0,0,.05);
+  background-color: rgba(52, 170, 16, 0.3);
+  text-align: center;
+  min-height: 100%;
 }
 
 html {
+  height: 100%;
   box-sizing: border-box;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+#root {
+  margin: 0 auto;
+  padding-top: 64px;
+  max-width: 640px;
+  width: 94%;
 }
 
 .rtl {
@@ -21,7 +31,7 @@ html {
 
 .box {
   width: 280px;
-  height: 226px;
+  height: 340px;
 }
 
 .box-marker {
