@@ -1,6 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+import Pager from './components/Pager'
+import Phrases from './components/Phrases'
+import { Router, Route, browserHistory, IndexRedirect } from 'react-router'
 import ApolloClient, { createNetworkInterface } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
 
@@ -21,7 +24,13 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <Router history={browserHistory}>
+      <Route component={App}>
+        <IndexRedirect to='vocabs' />
+        <Route path='vocabs' components={Pager} />
+        <Route path='phrases' components={Phrases} />
+      </Route>
+    </Router>
   </ApolloProvider>,
   document.getElementById('root')
 )
