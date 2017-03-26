@@ -19,11 +19,14 @@ export default class VocabItem extends React.Component {
           color={backgroundForType(this.props.vocab.type)}
           label={this.props.vocab.type}
         />
-        <div className='rtl flex items-center black-80 fw3 description pa3'>
+        <div
+          className='rtl flex items-center black-80 fw3 description pa3'
+          title={`${this.props.vocab.phonetics}`}
+        >
           {this.props.vocab.farsi}
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
-          {this.props.vocab.phonetics}
+          {this.props.vocab.english}
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
           {this.props.vocab.german}

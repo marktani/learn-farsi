@@ -9,6 +9,7 @@ export default class Header extends Component {
           <div className='tc pb3'>
             <Link to='/vocabs' className='link dim gray f6 f5-ns dib mr3' href='#'>Vocabs</Link>
             <Link to='/phrases' className='link dim gray f6 f5-ns dib mr3' href='#'>Phrases</Link>
+            <Link to='/interrogatives' className='link dim gray f6 f5-ns dib mr3' href='#'>Interrogatives</Link>
           </div>
         </nav>
       </div>

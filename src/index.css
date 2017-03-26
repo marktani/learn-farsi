@@ -18,13 +18,6 @@ html {
   box-sizing: inherit;
 }
 
-#root {
-  margin: 0 auto;
-  padding-top: 64px;
-  max-width: 640px;
-  width: 94%;
-}
-
 .rtl {
   direction: rtl
 }

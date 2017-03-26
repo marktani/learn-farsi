@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import Loading from 'react-loading-animation'
-import Vocabs from './Vocabs'
+import Vocabs from '../components/Vocabs'
 
 class Pager extends React.Component {
   constructor(props) {
@@ -23,9 +23,6 @@ class Pager extends React.Component {
 
     return (
       <div>
-        <div>
-          {this.props.data._allVocabsMeta.count}
-        </div>
         <Vocabs
           page={this.state.page}
           previous={this._prev}

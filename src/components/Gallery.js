@@ -11,28 +11,6 @@ class Vocabs extends React.Component {
     data: React.PropTypes.object.isRequired,
   }
 
-  _renderPrev = () => {
-    return (
-      <a
-        className='link dim silver tc v-mid fw4 f1'
-        onClick={this.props.previous}
-      >
-        {'<'}
-      </a>
-    )
-  }
-
-  _renderNext = () => {
-    return (
-      <a
-        className='link dim silver tc v-mid fw4 f1'
-        onClick={this.props.next}
-      >
-        {'>'}
-      </a>
-    )
-  }
-
   render () {
     if (this.props.data.loading) {
       return (<div className='flex w-100 h-100 items-center justify-center pt7'>
@@ -41,9 +19,8 @@ class Vocabs extends React.Component {
     }
 
     return (
-      <div className={'flex pa6 justify-center items-center w-100'}>
-        {this._renderPrev()}
-        <div className='' style={{maxWidth: 1150}}>
+      <div className={'flex flex-column justify-center items-center w-100'}>
+        <div className='flex justify-center flex-wrap'>
           {this.props.data.allVocabs.map((vocab) => (
             <VocabCard
               key={vocab.id}
@@ -51,17 +28,16 @@ class Vocabs extends React.Component {
             />
           ))}
         </div>
-        {this._renderNext()}
       </div>
     )
   }
 }
 
 const allVocabsQuery = gql`
-query VocabPage($skip: Int!) {
+query Gallery($filter: VocabFilter!) {
   allVocabs(
-    first: 1
-    skip: $skip
+    first: 100
+    filter: $filter
   ) {
     id
     farsi
@@ -76,7 +52,7 @@ export default graphql(allVocabsQuery, {
   options: (ownProps) => {
     return {
       variables: {
-        skip: ownProps.page
+        filter: ownProps.filter
       }
     }
   }

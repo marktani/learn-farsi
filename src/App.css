@@ -24,10 +24,11 @@
 
 .Footer {
   color: #7F7F7F;
+  background-color: rgba(52, 170, 16, 0.3);
   font-size: 16px;
   text-align: center;
   font-weight: 300;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
