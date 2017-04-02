@@ -3,7 +3,7 @@ import { backgroundForType } from '../utils'
 
 import Marker from './Marker'
 
-export default class VocabItem extends React.Component {
+export default class VocabCard extends React.Component {
 
   static propTypes = {
     vocab: React.PropTypes.object.isRequired,
@@ -20,16 +20,33 @@ export default class VocabItem extends React.Component {
           label={this.props.vocab.type}
         />
         <div
-          className='rtl flex items-center black-80 fw3 description pa3'
+          className='flex justify-between black-80 fw3 description pa3'
           title={`${this.props.vocab.phonetics}`}
         >
-          {this.props.vocab.farsi}
+          <div>
+            🇮🇷
+          </div>
+          <div
+            className='rtl'
+          >
+            {this.props.vocab.farsi}
+          </div>
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
-          {this.props.vocab.english}
+          <div>
+            🇺🇸
+          </div>
+          <div>
+            {this.props.vocab.english}
+          </div>
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
-          {this.props.vocab.german}
+          <div>
+            🇩🇪
+          </div>
+          <div>
+            {this.props.vocab.german}
+          </div>
         </div>
       </div>
     )

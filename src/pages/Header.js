@@ -7,9 +7,10 @@ export default class Header extends Component {
       <div className='Header'>
         <nav className='pa3 pa4-ns'>
           <div className='tc pb3'>
-            <Link to='/vocabs' className='link dim gray f6 f5-ns dib mr3' href='#'>Vocabs</Link>
-            <Link to='/phrases' className='link dim gray f6 f5-ns dib mr3' href='#'>Phrases</Link>
-            <Link to='/interrogatives' className='link dim gray f6 f5-ns dib mr3' href='#'>Interrogatives</Link>
+            <Link to='/vocabs' className='link dim gray f6 f5-ns dib mr3'>Vocabs</Link>
+            <Link to='/phrases' className='link dim gray f6 f5-ns dib mr3'>Phrases</Link>
+            <Link to='/interrogatives' className='link dim gray f6 f5-ns dib mr3'>Interrogatives</Link>
+            <Link to='/suggestions' className='link dim gray f6 f5-ns dib mr3'>Suggestions</Link>
           </div>
         </nav>
       </div>

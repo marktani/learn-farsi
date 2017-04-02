@@ -59,7 +59,9 @@ class Pager extends React.Component {
 
 const vocabCount = gql`
 query vocabCount {
-  _allVocabsMeta {
+  _allVocabsMeta(filter: {
+     isApproved: true
+   }) {
     count
   }
 }

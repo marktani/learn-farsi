@@ -62,6 +62,9 @@ query VocabPage($skip: Int!) {
   allVocabs(
     first: 1
     skip: $skip
+    filter: {
+      isApproved: true
+    }
   ) {
     id
     farsi

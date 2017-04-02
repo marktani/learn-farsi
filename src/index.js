@@ -4,6 +4,7 @@ import App from './App'
 import Pager from './pages/Pager'
 import Phrases from './pages/Phrases'
 import Interrogatives from './pages/Interrogatives'
+import Suggestions from './pages/Suggestions'
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router'
 import ApolloClient, { createNetworkInterface } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
@@ -31,6 +32,7 @@ ReactDOM.render(
         <Route path='vocabs' components={Pager} />
         <Route path='phrases' components={Phrases} />
         <Route path='interrogatives' components={Interrogatives} />
+        <Route path='suggestions' components={Suggestions} />
       </Route>
     </Router>
   </ApolloProvider>,

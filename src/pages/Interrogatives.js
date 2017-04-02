@@ -6,7 +6,10 @@ export default class Interrogatives extends Component {
     return (
       <div>
         <Gallery
-          filter={{isInterrogative: true}}
+          filter={{
+            isInterrogative: true,
+            isApproved: true,
+          }}
         />
       </div>
     )
