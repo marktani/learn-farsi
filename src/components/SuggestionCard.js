@@ -29,7 +29,7 @@ class SuggestionCard extends React.Component {
 
     return (
       <div
-        className={'bg-white ma3 box vocab flex flex-column no-underline br2'}
+        className={'bg-white ma3 box vocab flex flex-column no-underline br2 center'}
       >
         <TypeDropdown
           type={this.state.vocab.type}
