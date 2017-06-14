@@ -3,10 +3,11 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import TypeDropdown from './TypeDropdown'
+import PropTypes from 'prop-types'
 
 class SuggestionCard extends React.Component {
   static propTypes = {
-    vocab: React.PropTypes.object,
+    vocab: PropTypes.object,
   }
 
   constructor(props) {
@@ -40,7 +41,9 @@ class SuggestionCard extends React.Component {
           title={`${this.state.vocab.phonetics}`}
         >
           <div>
-            🇮🇷
+            <span role='img' aria-label='Farsi'>
+              🇮🇷
+            </span>
           </div>
           <input
             style={{
@@ -54,7 +57,9 @@ class SuggestionCard extends React.Component {
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
           <div>
-            🇺🇸
+            <span role='img' aria-label='US English'>
+              🇺🇸
+            </span>
           </div>
           <input
             style={{
@@ -68,7 +73,9 @@ class SuggestionCard extends React.Component {
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
           <div>
-            🇩🇪
+            <span role='img' aria-label='German'>
+              🇩🇪
+            </span>
           </div>
           <input
             style={{

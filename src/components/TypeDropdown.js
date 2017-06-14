@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
+import PropTypes from 'prop-types'
 
 class TypeDropdown extends Component {
   static propTypes = {
-    type: React.PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }
 
   constructor(props) {

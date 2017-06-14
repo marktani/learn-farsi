@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class Marker extends React.Component {
 
   static propTypes = {
-    color: React.PropTypes.string.isRequired,
-    label: React.PropTypes.string,
+    color: PropTypes.string.isRequired,
+    label: PropTypes.string,
   }
 
   render () {

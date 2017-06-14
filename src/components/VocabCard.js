@@ -2,11 +2,12 @@ import React from 'react'
 import { backgroundForType } from '../utils'
 
 import Marker from './Marker'
+import PropTypes from 'prop-types'
 
 export default class VocabCard extends React.Component {
 
   static propTypes = {
-    vocab: React.PropTypes.object.isRequired,
+    vocab: PropTypes.object.isRequired,
   }
 
   render () {
@@ -24,7 +25,9 @@ export default class VocabCard extends React.Component {
           title={`${this.props.vocab.phonetics}`}
         >
           <div>
-            🇮🇷
+            <span role='img' aria-label='Farsi'>
+              🇮🇷
+            </span>
           </div>
           <div
             className='rtl'
@@ -34,7 +37,9 @@ export default class VocabCard extends React.Component {
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
           <div>
-            🇺🇸
+            <span role='img' aria-label='US English'>
+              🇺🇸
+            </span>
           </div>
           <div>
             {this.props.vocab.english}
@@ -42,7 +47,9 @@ export default class VocabCard extends React.Component {
         </div>
         <div className='flex items-center black-80 fw3 description pa3'>
           <div>
-            🇩🇪
+            <span role='img' aria-label='German'>
+              🇩🇪
+            </span>
           </div>
           <div>
             {this.props.vocab.german}

@@ -4,11 +4,12 @@ import gql from 'graphql-tag'
 import Loading from 'react-loading-animation'
 
 import VocabCard from './VocabCard'
+import PropTypes from 'prop-types'
 
 class Vocabs extends React.Component {
 
   static propTypes = {
-    data: React.PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,
   }
 
   _renderPrev = () => {
