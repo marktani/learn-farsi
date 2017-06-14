@@ -1,6 +1,5 @@
 import React from 'react'
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
+import { graphql, gql } from 'react-apollo'
 
 import TypeDropdown from './TypeDropdown'
 import PropTypes from 'prop-types'
