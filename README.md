@@ -1,1 +1,1 @@
-# learn-farsi
+# learn-farsi-next-js

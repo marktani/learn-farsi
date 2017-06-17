@@ -1,0 +1,9 @@
+{
+  "schema": {
+    "request": {
+      "url": "https://api.graph.cool/simple/v1/learn-farsi",
+      "method": "POST",
+      "postIntrospectionQuery": true
+    }
+  }
+}
