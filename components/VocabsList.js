@@ -3,19 +3,23 @@ import { graphql, gql } from 'react-apollo'
 
 const VideosList = ({ data, url }) => {
 
-  const a = url
-
   if (data.loading) {
     return <div>Loading</div>
   }
 
-  console.log(data)
-
   return (
     <div className='videos-list'>
       <VocabSection
-        key="All"
-        vocabs={data.all.vocabs}
+        tag='Interrogatives'
+        vocabs={data.interrogatives.vocabs}
+      />
+      <VocabSection
+        tag='Numbers'
+        vocabs={data.numbers.vocabs}
+      />
+      <VocabSection
+        tag='Pronouns'
+        vocabs={data.pronouns.vocabs}
       />
     </div>
   )
@@ -24,6 +28,15 @@ const VideosList = ({ data, url }) => {
 const query = gql`
   {
     all: Tag(key: "all") {
+      ... TagInfo
+    }
+    numbers: Tag(key: "numbers") {
+      ... TagInfo
+    }
+    interrogatives: Tag(key: "interrogatives") {
+      ... TagInfo
+    }
+    pronouns: Tag(key: "pronouns") {
       ... TagInfo
     }
   }

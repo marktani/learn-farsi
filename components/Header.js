@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 export default ({ url }) => {
-  const eventsActive = url.query.sortBy ? url.query.sortBy === 'events' : true
   return (
     <header className='header'>
       <style jsx={true}>{`
@@ -19,6 +18,10 @@ export default ({ url }) => {
         font-size: 25px;
         font-weight: 400;
         color: inherit;
+      }
+
+      .page-title {
+        font-family: Helvetica;
       }
 
       .tabbar {
@@ -81,7 +84,7 @@ export default ({ url }) => {
       }
     `}</style>
 
-      <h1 className='page-title'>Learn Farsi<br/><span>فارسی یاد بگیرند</span></h1>
+      <h1 className='page-title'>Learn Farsi<br/><span className='farsi'>فارسی یاد بگیرند</span></h1>
       <div className='tabbar'>
         <div className='tabs'>
           <Link href='/'><a className='option active'>Home</a></Link>

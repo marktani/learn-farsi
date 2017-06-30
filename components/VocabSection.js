@@ -1,8 +1,8 @@
 import Vocab from './Vocab'
 
-export default ({key, vocabs}) => {
+export default ({tag, vocabs}) => {
 
-  console.log(vocabs)
+  console.log(tag, vocabs)
 
   return (
     <div className='videos-section'>
@@ -54,7 +54,7 @@ export default ({key, vocabs}) => {
     `}</style>
       <header className='header'>
         <h2>
-          {key}
+          {tag}
         </h2>
       </header>
       <div className='videos'>
