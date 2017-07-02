@@ -9,17 +9,25 @@ const VideosList = ({ data, url }) => {
 
   return (
     <div className='videos-list'>
+      {
+        /*
+         <VocabSection
+           tag='Explanation'
+           vocabs={[data.explanation]}
+         />
+         */
+      }
       <VocabSection
-        tag='Interrogatives'
-        vocabs={data.interrogatives.vocabs}
+        tag='Nouns'
+        vocabs={data.nouns.vocabs}
       />
       <VocabSection
         tag='Numbers'
         vocabs={data.numbers.vocabs}
       />
       <VocabSection
-        tag='Pronouns'
-        vocabs={data.pronouns.vocabs}
+        tag='All'
+        vocabs={data.all.vocabs}
       />
     </div>
   )
@@ -27,6 +35,11 @@ const VideosList = ({ data, url }) => {
 
 const query = gql`
   {
+    explanation: allVocabs(filter: {
+      type: EXPLANATION
+    }) {
+      ... VocabInfo
+    }
     all: Tag(key: "all") {
       ... TagInfo
     }
@@ -36,18 +49,22 @@ const query = gql`
     interrogatives: Tag(key: "interrogatives") {
       ... TagInfo
     }
-    pronouns: Tag(key: "pronouns") {
+    nouns: Tag(key: "nouns") {
       ... TagInfo
     }
   }
   
   fragment TagInfo on Tag {
     vocabs {
-      id
-      farsi
-      english
-      german
+      ... VocabInfo
     }
+  }
+  
+  fragment VocabInfo on Vocab {
+    id
+    farsi
+    english
+    german
   }
 `
 

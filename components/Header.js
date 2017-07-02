@@ -86,12 +86,16 @@ export default ({ url }) => {
 
       <h1 className='page-title'>Learn Farsi<br/><span className='farsi'>فارسی یاد بگیرند</span></h1>
       <div className='tabbar'>
-        <div className='tabs'>
-          <Link href='/'><a className='option active'>Home</a></Link>
-          <Link href='/'><a className='option'>Vocabs</a></Link>
-          <Link href='/'><a className='option'>Phrases</a></Link>
-          <Link href='/'><a className='option'>Movies</a></Link>
-        </div>
+        {
+          /*
+           <div className='tabs'>
+           <Link href='/'><a className='option active'>Home</a></Link>
+           <Link href='/'><a className='option'>Vocabs</a></Link>
+           <Link href='/'><a className='option'>Phrases</a></Link>
+           <Link href='/'><a className='option'>Movies</a></Link>
+           </div>
+          */
+        }
       </div>
     </header>
   )

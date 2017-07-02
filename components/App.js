@@ -46,6 +46,10 @@ export default ({ children }) => (
         font-weight: 400;
         color: var(--light-gray);
       }
+
+      .farsi {
+        direction: rtl;
+      }
     `}</style>
   </main>
 )

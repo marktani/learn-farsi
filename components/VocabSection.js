@@ -2,8 +2,6 @@ import Vocab from './Vocab'
 
 export default ({tag, vocabs}) => {
 
-  console.log(tag, vocabs)
-
   return (
     <div className='videos-section'>
       <style jsx>{`
@@ -29,7 +27,7 @@ export default ({tag, vocabs}) => {
         bottom: 0;
         height: 6px;
         width: 50px;
-        background: var(--green);
+        background: var(--light-gray);
       }
 
       .header h2 {
@@ -49,7 +47,7 @@ export default ({tag, vocabs}) => {
         padding-top: 30px;
         padding-left: 60px;
         padding-bottom: 60px;
-        overflow: auto;
+        flex-flow: wrap;
       }
     `}</style>
       <header className='header'>
