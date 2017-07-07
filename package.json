@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
+    "export": "next export",
     "start": "next start"
   },
   "dependencies": {
     "graphql": "^0.10.1",
     "next": "latest",
-    "react": "^15.4.2",
+    "react": "^15.6.1",
     "react-apollo": "^1.4.2",
     "redux": "^3.7.0"
   },

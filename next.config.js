@@ -1,4 +1,7 @@
-exports.exportPathMap = () => ({
-  '/': { page: '/index' },
-  '/suggestions': { page: '/suggestions' },
-})
+module.exports = {
+  distDir: 'build',
+  exportPathMap: () => ({
+    '/': { page: '/index' },
+    '/suggestions': { page: '/suggestions' },
+  }),
+}
