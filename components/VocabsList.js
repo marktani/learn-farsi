@@ -1,19 +1,19 @@
 import VocabSection from './VocabSection'
 import { graphql, gql } from 'react-apollo'
 
-const VideosList = ({ data, url }) => {
+const VocabsList = ({ data, url }) => {
 
   if (data.loading) {
     return <div>Loading</div>
   }
 
   return (
-    <div className='videos-list'>
+    <div>
       {
         /*
          <VocabSection
-           tag='Explanation'
-           vocabs={[data.explanation]}
+         tag='Explanation'
+         vocabs={[data.explanation]}
          />
          */
       }
@@ -68,6 +68,4 @@ const query = gql`
   }
 `
 
-export default graphql(query)(VideosList)
-
-//
+export default graphql(query)(VocabsList)
