@@ -2,3 +2,5 @@
 node_modules
 .idea
 .next
+build/
+out/
