@@ -1,7 +1,7 @@
 module.exports = {
   distDir: 'build',
   exportPathMap: () => ({
-    '/': { page: '/index' },
+    '/': { page: '/' },
     '/suggestions': { page: '/suggestions' },
   }),
 }
