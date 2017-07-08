@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 export default ({ url }) => {
 
+  console.log(url)
+
   const className = (route) => {
     return url.pathname === route ? 'active option' : 'option'
   }
@@ -55,31 +57,6 @@ export default ({ url }) => {
 
       .option:hover {
         color: var(--gray-0);
-      }
-
-      .switch {
-        width: 30px;
-        height: 18px;
-        border-radius: 500px;
-        background: rgba(255,255,255,0.2);
-        display: flex;
-        cursor: pointer;
-        margin: 0 10px;
-      }
-
-      .switch:after {
-        content: "";
-        background: white;
-        border-radius: 500px;
-        height: 18px;
-        width: 18px;
-      }
-
-      .switch.left {
-        justify-content: flex-start;
-      }
-      .switch.right {
-        justify-content: flex-end;
       }
     `}</style>
 
