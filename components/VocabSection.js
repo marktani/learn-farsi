@@ -10,7 +10,23 @@ export default ({tag, vocabs}) => {
       }
 
       .videos-section:nth-child(even) {
-        background: rgba(0,0,0,0.04);
+        background: var(--gray-0);
+      }
+
+      .videos-section:nth-child(odd) {
+        background: var(--gray-0);
+      }
+
+      .videos-section:after {
+        display: block;
+        content: "";
+        position: relative;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 10%;
+        background: var(--p-green-0);
+        # margin:0 auto;
       }
 
       .header {
@@ -20,26 +36,11 @@ export default ({tag, vocabs}) => {
         margin: 0 50px;
       }
 
-      .header:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 6px;
-        width: 50px;
-        background: var(--light-gray);
-      }
-
       .header h2 {
         font-size: 30px;
         font-weight: 700;
         padding: 5px 0 10px;
-      }
-
-      header h2 span {
-        font-weight: 400;
-        color: rgba(0,0,0,0.2);
-        margin-left: 10px;
+        # text-align: center;
       }
 
       .videos {
@@ -48,6 +49,7 @@ export default ({tag, vocabs}) => {
         padding-left: 60px;
         padding-bottom: 60px;
         flex-flow: wrap;
+        # justify-content: center;
       }
     `}</style>
       <header className='header'>

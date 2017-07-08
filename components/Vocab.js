@@ -9,7 +9,7 @@ export default ({ vocab }) => (
         margin: 20px;
       }
 
-      .video-preview {
+      .vocab-card {
         display: flex;
         flex-direction: column;
       }
@@ -19,7 +19,7 @@ export default ({ vocab }) => (
         border-radius: 2px;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16),
                     0 3px 6px rgba(0,0,0,0.23);
-        background: var(--green);
+        background: var(--p-green-0);
       }
 
       .content:hover {
@@ -29,7 +29,7 @@ export default ({ vocab }) => (
       }
     `}</style>
     <div className='content'>
-      <div className='video-preview'>
+      <div className='vocab-card'>
         <h3 className='title farsi'>🇮🇷 {vocab.farsi}</h3>
         <h3 className='title'>🇺🇸 {vocab.english}</h3>
       </div>

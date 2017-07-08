@@ -10,7 +10,7 @@ export default ({ url }) => {
     <header className='header'>
       <style jsx={true}>{`
       .header {
-        background: var(--green);
+        background: var(--p-green-0);
       }
 
       .header h1 {
@@ -30,7 +30,7 @@ export default ({ url }) => {
       }
 
       .tab-bar {
-        background: rgba(0,0,0,0.1);
+        background: var(--p-green-3);
         padding: 20px 30px;
         display: flex;
         align-items: center;
@@ -44,18 +44,17 @@ export default ({ url }) => {
 
       .option {
         font-size: 20px;
-        color: rgba(255,255,255,0.5);
         cursor: pointer;
         text-decoration: none;
         margin-right: 20px;
       }
 
       .option.active {
-        color: white;
+        color: var(--gray-0);
       }
 
       .option:hover {
-        color: white;
+        color: var(--gray-0);
       }
 
       .switch {
