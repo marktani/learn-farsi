@@ -3,21 +3,21 @@ import Vocab from './Vocab'
 export default ({tag, vocabs}) => {
 
   return (
-    <div className='videos-section'>
+    <div className='section'>
       <style jsx>{`
-      .videos-section {
+      .section {
         padding: 60px 0 0;
       }
 
-      .videos-section:nth-child(even) {
+      .section:nth-child(even) {
         background: var(--gray-0);
       }
 
-      .videos-section:nth-child(odd) {
+      .section:nth-child(odd) {
         background: var(--gray-0);
       }
 
-      .videos-section:after {
+      .section:after {
         display: block;
         content: "";
         position: relative;
@@ -43,7 +43,7 @@ export default ({tag, vocabs}) => {
         # text-align: center;
       }
 
-      .videos {
+      .vocabs {
         display: flex;
         padding-top: 30px;
         padding-left: 60px;
@@ -57,7 +57,7 @@ export default ({tag, vocabs}) => {
           {tag}
         </h2>
       </header>
-      <div className='videos'>
+      <div className='vocabs'>
         {vocabs.map(vocab => (
           <Vocab key={vocab.id} vocab={vocab} />
         ))}
