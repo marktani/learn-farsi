@@ -12,6 +12,7 @@ export default ({ children }) => (
         --green: rgba(193,229,182,0.9)
         --dark-gray: rgba(0,0,0,0.9);
         --light-gray: rgba(0,0,0,0.5);
+        --dark-blue: #556677;
 
         --green-0: rgba( 45,134, 51,1);
         --green-1: rgba(134,201,139,1);

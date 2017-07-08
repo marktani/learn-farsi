@@ -1,10 +1,21 @@
-import Vocab from './Vocab'
+import React from 'react'
+import Suggestion from './Suggestion'
 
-export default ({tag, vocabs}) => {
+export default class SuggestionSection extends React.Component {
 
-  return (
-    <div className='section'>
-      <style jsx>{`
+  constructor(props) {
+    super(props)
+    this.state = {
+      farsi: '',
+      english: '',
+    }
+  }
+
+  render () {
+
+    return (
+      <div className='section'>
+        <style jsx>{`
       .section {
         padding: 60px 0 0;
       }
@@ -25,7 +36,7 @@ export default ({tag, vocabs}) => {
         bottom: 0;
         height: 2px;
         width: 10%;
-        background: var(--p-green-0);
+        background: var(--dark-blue);
         # margin:0 auto;
       }
 
@@ -52,16 +63,15 @@ export default ({tag, vocabs}) => {
         # justify-content: center;
       }
     `}</style>
-      <header className='header'>
-        <h2>
-          {tag}
-        </h2>
-      </header>
-      <div className='vocabs'>
-        {vocabs.map(vocab => (
-          <Vocab key={vocab.id} vocab={vocab} />
-        ))}
+        <header className='header'>
+          <h2>
+            New Suggestion
+          </h2>
+        </header>
+        <div className='vocabs'>
+          <Suggestion />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }

@@ -1,4 +1,5 @@
-import VocabSection from './VocabSection'
+import VocabSection from '../vocabs/VocabSection'
+import SuggestionSection from './SuggestionSection'
 import { graphql, gql } from 'react-apollo'
 
 const SuggestionsList = ({ data, url }) => {
@@ -9,6 +10,7 @@ const SuggestionsList = ({ data, url }) => {
 
   return (
     <div>
+      <SuggestionSection />
       <VocabSection
         tag='Suggestions'
         vocabs={data.suggestions}

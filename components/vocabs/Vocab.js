@@ -14,6 +14,18 @@ export default ({ vocab }) => (
         flex-direction: column;
       }
 
+      .farsi-vocab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .vocab {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+      }
+
       .content {
         padding: 15px;
         border-radius: 2px;
@@ -30,8 +42,22 @@ export default ({ vocab }) => (
     `}</style>
     <div className='content'>
       <div className='vocab-card'>
-        <h3 className='title farsi'>🇮🇷 {vocab.farsi}</h3>
-        <h3 className='title'>🇺🇸 {vocab.english}</h3>
+        <div className='farsi-vocab'>
+          <h3
+            className='title farsi'
+          >
+            {vocab.farsi}
+          </h3>
+          <div className='title farsi'>🇮🇷</div>
+        </div>
+        <div className='vocab'>
+          <h3
+            className='title'
+          >
+            {vocab.english}
+          </h3>
+          <div className='title'>🇺🇸</div>
+        </div>
       </div>
     </div>
   </div>
