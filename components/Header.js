@@ -5,7 +5,12 @@ export default ({ url }) => {
   console.log(url)
 
   const className = (route) => {
-    return url.pathname === route ? 'active option' : 'option'
+    switch (url.pathname) {
+      case '':
+        return route === '/' ? 'active option' : 'option'
+      default:
+        return url.pathname === route ? 'active option' : 'option'
+    }
   }
 
   return (
